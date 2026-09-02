@@ -1,0 +1,11 @@
+Write a solution to report the name and bonus amount of each employee who satisfies either of the following:
+
+The employee has a bonus less than 1000.
+The employee did not get any bonus.
+Return the result table in any order.
+
+# Write your MySQL query statement below
+SELECT E.name , B.bonus 
+FROM Employee E
+LEFT JOIN Bonus B on E.empId = B.empId
+WHERE B.bonus < 1000 OR B.bonus IS NULL;  
